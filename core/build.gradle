@@ -1,5 +1,10 @@
 plugins {
     id 'bb-bms.java-library-conventions'
+    id 'org.springframework.boot'
+}
+
+bootJar {
+    enabled = false
 }
 
 dependencies {
