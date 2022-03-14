@@ -1,0 +1,4 @@
+plugins {
+    id 'bb-bms.java-common-conventions'
+    id 'java-library'
+}

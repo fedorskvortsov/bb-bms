@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+group = 'org.skvortsov'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    constraints {
+        compileOnly 'org.projectlombok:lombok'
+        // developmentOnly 'org.springframework.boot:spring-boot-devtools'
+        annotationProcessor 'org.projectlombok:lombok'
+        // testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
